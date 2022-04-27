@@ -1,0 +1,10 @@
+[Unit]
+Description=Refresh images and update containers
+Wants=podman-compose.service
+After=podman-compose.service
+
+[Timer]
+OnCalendar=*:0/6
+
+[Install]
+WantedBy=timers.target

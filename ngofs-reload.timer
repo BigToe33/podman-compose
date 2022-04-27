@@ -1,0 +1,10 @@
+[Unit]
+Description=Refresh images and update containers
+Wants=ngofs.service
+After=ngofs.service
+
+[Timer]
+OnCalendar=*:0/3
+
+[Install]
+WantedBy=timers.target
